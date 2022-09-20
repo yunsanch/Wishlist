@@ -46,10 +46,10 @@
         android:id="@+id/nameStoreEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="URL"
+        android:hint="https://store.com/myitem"
         android:ems="10"
         android:inputType="textUri"
-        android:lines="1"
+        android:lines="0"
         android:maxLines="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/itemWishedEt" />
