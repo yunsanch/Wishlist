@@ -7,8 +7,58 @@
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/wishListRv"
+        android:id="@+id/wishListRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/itemWishedEt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="1dp" />
+
+
+    <EditText
+        android:id="@+id/itemWishedEt"
+        android:layout_width="205dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Item name"
+        android:inputType="text"
+        android:lines="1"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/nameStoreEt"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/itemPriceEt"
+        android:layout_width="114dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:lines="1"
+        android:maxLines="1"
+        android:hint="Ex:5.95"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/itemWishedEt" />
+
+    <EditText
+        android:id="@+id/nameStoreEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="URL"
+        android:ems="10"
+        android:inputType="textUri"
+        android:lines="1"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/itemWishedEt" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        app:layout_constraintBottom_toBottomOf="@+id/nameStoreEt"
+        app:layout_constraintEnd_toEndOf="@+id/itemPriceEt" />
 </androidx.constraintlayout.widget.ConstraintLayout>
